@@ -313,6 +313,11 @@
 		}
 		&_blog {
 			font-size:36px;
+			&-header {
+				font-size: 30px;
+				margin-top: 0px;
+				text-align: left;
+			}
 		}
 	}
 	&__box {
@@ -882,9 +887,93 @@
 		}
 	}
 	&-blog {
+		&__padding {
+			padding: 0px 22px;
+		}
+		&__left {
+			float:left;
+		}
+		&__right {
+			float:right;
+		}
+		&__box {
+			padding-top: 22px;
+			padding-bottom: 22px;
+			border-bottom:1px solid #d6d6d6;
+			&-title {
+				font-size: 24px;
+				font-family: $MonMedium;
+				color: $main-color;
+				display: block;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				&:hover {
+					color: $main-color;
+				}
+				&:active {
+					color: $main-color;
+				}
+				&:link {
+					color: $main-color;
+				}
+			}
+			&-right {
+				float:right;
+			}
+			&-link {
+				font-size: 14px;
+				font-family: $MonMedium;
+				color: $pink-color;
+				&:hover {
+					color: $pink-color;
+				}
+				&:active {
+					color: $pink-color;
+				}
+				&:link {
+					color: $pink-color;
+				}
+			}
+		}
+		&__tags {
+			font-family: $MonMedium;
+			font-size: 14px;
+			color: $main-color;
+		}
+	&__form {
+		position: relative;
+		width: 100%;
+		margin-left: 35px;
+		&::before {
+			content:"";
+			position: absolute;
+			width: 18px;
+			height: 100%;
+			top:9px;
+			cursor:pointer;
+			left:16px;
+			background:url("../img/headsearch.png") no-repeat;
+		}
+	}
+		&__header {
+			background:#ececec;
+			&-center {
+				display:flex;
+				align-items:center;
+				height: 85px;
+			}
+		}
 		&__content {
 			padding-right: 105px;
 			padding-left: 105px;
+		}
+		&__thumbnail {
+			background-position:center center;
+			background-size:cover;
+			width: 170px;
+			margin-right: 18px;
+			height: 170px;
+			background-repeat:no-repeat;
 		}
 		&__date {
 			font-family: $MonMedium;
@@ -892,7 +981,6 @@
 			color: #c1c1c1;
 			font-size: 14px;
 			text-align: center;
-			margin-top: 15px;
 			&-inner {	
 				margin-left: 5px;
 				font-family: inherit;
@@ -909,6 +997,7 @@
 			font-family: $MonRegular;
 			color: #212121;
 			margin-top: 37px;
+			margin-bottom: 30px;
 		}
 		&__comments {
 			padding-top: 25px;
@@ -916,6 +1005,7 @@
 			&-title {
 				font-family: $MonMedium;
 				font-size: 24px;
+				padding-left: 35px;
 				color: $main-color;
 				&-inner {
 					font-family: inherit;
@@ -923,11 +1013,11 @@
 				}
 			}
 			&-box {
-				margin-top: 35px;
+				margin-top: 20px;
 				border-bottom:1px solid #d6d6d6;
 				padding-right: 35px;
 				padding-left: 35px;
-				padding-bottom: 35px;
+				padding-bottom: 10px;
 				float:left;
 			}
 			&-content {
@@ -939,10 +1029,18 @@
 				font-family: $MonRegular;
 				color: #c1c1c1;
 				font-size: 14px;
+				&_left {
+					float:none;
+					margin-top: 10px;
+				}
 			}
 			&-text {
 				font-family: $MonRegular;
 				font-size: 14px;
+				&_hidden {
+ 				   height: 45px;
+				   overflow: hidden;
+				}
 			}
 			&-form {
 				width: 100%;
@@ -989,10 +1087,17 @@
 			font-family: $MonMedium;
 			margin-bottom: 0px;
 			font-size: 18px;
-			color: $main-color;
+			color: $pink-color;
 			float:left;
+			&_blue {
+				color: $main-color;
+			}
 			&-inner {
 				font-family: inherit;
+				color: $pink-color;
+			}
+			&_float {
+				float:none;
 			}
 		}
 		&__like {
@@ -1058,6 +1163,7 @@
 	&__header {
 		border-bottom:1px solid #d6d6d6;
 	}
+
 	&__list {
 		display: none;
 		position: absolute;
